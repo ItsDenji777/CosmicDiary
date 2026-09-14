@@ -1,0 +1,33 @@
+<?php
+/**
+ * API endpoint that edits a chat message.
+ */
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once '../../includes/config.php';
+header('Content-Type: application/json');
+
+if (!isset($_SESSION['user_id'])) {
+    echo json_encode(['success' => false, 'message' => 'You must be logged in.']);
+    exit;
+}
+
+$messageId = intval($_POST['id'] ?? 0);
+$message = trim($_POST['message'] ?? '');
+
+if (empty($message)) {
+    echo json_encode(['success' => false, 'message' => 'Message cannot be empty.']);
+    exit;
+}
+
+$stmt = $conn->prepare("UPDATE chat_messages SET message = ?, edited = 1 WHERE id = ? AND user_id = ?");
+$stmt->bind_param("sii", $message, $messageId, $_SESSION['user_id']);
+$stmt->execute();
+
+if ($stmt->affected_rows > 0) {
+    echo json_encode(['success' => true]);
+} else {
+    echo json_encode(['success' => false, 'message' => 'Message not found or not yours.']);
+}
+exit;
+?>

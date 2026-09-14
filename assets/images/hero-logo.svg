@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 834 834" width="834" height="834" style="overflow:visible;">
+<style>
+  .spin-slow { animation: spin 12s linear infinite; }
+  .spin-fast { animation: spin 5s linear infinite; }
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
+  <circle cx="417" cy="417" r="370" fill="none" stroke="#00779b" stroke-width="25" opacity="0.65"/>
+  <circle cx="417" cy="417" r="250" fill="none" stroke="#00779b" stroke-width="21" opacity="0.7"/>
+  <g class="spin-slow" style="transform-origin:417px 417px;">
+    <circle cx="417" cy="47" r="50" fill="#00f7ff"/>
+  </g>
+  <g class="spin-fast" style="transform-origin:417px 417px;">
+    <circle cx="417" cy="167" r="38" fill="#00f7ff"/>
+  </g>
+  <circle cx="417" cy="417" r="80" fill="#7b2fff"/>
+</svg>
