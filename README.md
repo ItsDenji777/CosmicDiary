@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/images/logo.svg" alt="Cosmic Diary Logo" width="120" height="120">
+  <img src="assets/images/hero-logo.svg" alt="Cosmic Diary Logo" width="120" height="120">
 </p>
 
 <h1 align="center"><a href="https://cosmic-diary.infinityfree.io/">Cosmic Diary</a></h1>
