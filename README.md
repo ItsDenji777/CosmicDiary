@@ -131,11 +131,3 @@ CosmicDiary/
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
-
-### Changes made
-
-- Removed the "Default Test Accounts" section entirely
-- Changed "The database seed includes over 100 test users" text
-- Updated the TIP callout to only mention registering a new account
-- Changed `database.sql` description in project structure from "Full schema and seed data" to "Full database schema"
